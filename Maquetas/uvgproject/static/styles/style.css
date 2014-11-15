@@ -1,0 +1,7 @@
+/*!
+    Theme Name: Uvgproject
+    Theme URI: http://uvgproject/
+    Description: This is our awesome sytlesheet
+    Version: 1.0
+    Tags: not-responsive
+*/.l-box{padding-left:1em;padding-right:1em;padding-top:1em;padding-bottom:-1em;box-sizing:border-box}.txt-center{text-align:center}.button-success,.button-error,.button-warning,.button-secondary{color:#fff;border-radius:4px;text-shadow:0 1px 1px rgba(0,0,0,.2)}.button-success{background:#1cb841}.button-error{background:#ca3c3c}.button-warning{background:#df7514}.button-secondary{background:#42b8dd}.align-right{flex-direction:row-reverse;text-align:right}.no-style{list-style:none}.control-group{margin-bottom:1em}.pre-text{text-align:justify;text-justify:inter-word;overflow-y:scroll;height:400px}.display-table{display:table;width:100%}.display-cell{display:table-cell;border:1px solid #000;padding-left:1em;padding-right:1em;padding-top:.5em;padding-bottom:.5em;box-sizing:border-box}.display-row{display:table-row}

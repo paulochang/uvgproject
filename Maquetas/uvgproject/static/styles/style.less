@@ -1,0 +1,93 @@
+/*!
+    Theme Name: Uvgproject
+    Theme URI: http://uvgproject/
+    Description: This is our awesome sytlesheet
+    Version: 1.0
+    Tags: not-responsive
+*/
+
+//compress: true
+
+.transition (@transition) {
+    -webkit-transition: @transition 500ms ease-in-out;
+    -moz-transition:    @transition 500ms ease-in-out;
+    -ms-transition:     @transition 500ms ease-in-out;
+    -o-transition:      @transition 500ms ease-in-out;
+    transition:         @transition 500ms ease-in-out;
+}
+
+.l-box {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: -1em;
+  box-sizing: border-box;
+}
+
+    .txt-center {
+        text-align: center;
+    }
+
+    .button-success,
+    .button-error,
+    .button-warning,
+    .button-secondary {
+        color: white;
+        border-radius: 4px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .button-success {
+        background: rgb(28, 184, 65); /* this is a green */
+    }
+
+    .button-error {
+        background: rgb(202, 60, 60); /* this is a maroon */
+    }
+
+    .button-warning {
+        background: rgb(223, 117, 20); /* this is an orange */
+    }
+
+    .button-secondary {
+        background: rgb(66, 184, 221); /* this is a light blue */
+    }
+
+.align-right {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.no-style {
+    list-style: none;
+}
+
+.control-group{
+    margin-bottom:  1em;
+}
+.pre-text {
+    text-align: justify;
+    text-justify: inter-word;
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.display-table {
+    display: table;
+    width: 100%;
+}
+
+.display-cell {
+    display: table-cell;
+    border: 1px solid black ;
+padding-left: 1em;
+padding-right: 1em;
+padding-top: 0.5em;
+padding-bottom: 0.5em;
+box-sizing: border-box;
+}
+
+.display-row {
+    display: table-row;
+}
+

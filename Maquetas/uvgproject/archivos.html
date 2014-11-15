@@ -1,0 +1,98 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Portal Académico - Perfil</title>
+    <meta name="description" content="Portal académico de UVG">
+    <meta name="author" content="UVG">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body class="l-box">
+    <script src="static/scripts/main.js"></script>
+    <div class="login pure-g align-right">
+        <div class="pure-u-3-4">
+            <form class="pure-form">
+                    <input type="email" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+
+                    <label for="remember">
+                        <input id="remember" type="checkbox"> Recordar
+                    </label>
+
+                    <button type="submit" class="pure-button pure-button-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <ul>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li class="pure-menu-selected"><a href="#">Archivos</a></li>
+            <li><a href="calendar.html">Calendario</a></li>
+        </ul>
+    </div>
+    <div class="pure-g">
+        <div class="pure-u-1-4 l-box">
+            <div class="Classfication-selector"><a href="#">By Courses</a>|<a href="#">By FileType</a></div>
+            <div class="search">
+                <form class="pure-form">
+                    <div class="control-group"><input type="search" name="googlesearch" placeholder="search">
+                                        <button class="pure-button button-success">
+                                            <i class="fa fa-search"></i>
+                                        </button></div>
+                </form>
+            </div>
+            <div class="pure-menu pure-menu-open">
+                <ul>
+                    <li class="pure-menu-heading">Compiladores</li>
+                    <li><a href="#">Compilers_1edition.pdf</a></li>
+                    <li><a href="#">ANTLR with C#.pdf</a></li>
+                    <li><a href="#">Introducción a MSIL</a></li>
+                    <li class="pure-menu-heading">Programación Güeps</li>
+                    <li class="pure-menu-heading">Sistemas Operativos</li>
+                    <li class="pure-menu-heading">Bases de datos</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pure-u-3-4 l-box">
+            <a href="#">Compiladores</a> > Antlr-C#
+            <div class="pure-g">
+                <div class="pure-u-2-3">
+                    <h1>ANTLR with C#</h1>
+                    <div class="pre-text">
+                        <p>ANTLR (ANother Tool for Language Recognition) is a tool for defining and implementing your own computer languages. Most of us won’t ever create a fully-fledged language like C# or Java, but it is often useful and efficient to create little languages for specialist situations, rather than writing clumsy string-parsing code. ANTLR is an ideal tool for handling situations like that, although it can also tackle large problems.</p>
+
+                        <p>ANTLR is written in Java, and most of the examples (and the only book I know of; there is a new edition of this book due out later this year, but from the blurb it seems it will still concentrate on Java) are given in Java. However, ANTLR is available for quite a few languages and since I use mainly C# I thought a post on getting started with ANTLR in C# and Visual Studio would be useful.</p>
+
+                        <p>First, we’ll look at getting ANTLR installed in Visual Studio. Start by visiting the C# download page. Download the antlr-dotnet-csharpbootstrap file and the ANTLR language support listed under Visual Studio 2010 Extensions. You should also get the documentation using the link at the top of the download page, although this documentation is a bit sketchy.</p>
+
+                        <p>Install the VS extension (it’s a self-installing file). I had a problem with the installation in that the Intellisense for grammar files wouldn’t work, and Visual Studio complained of an exception whenever a grammar file was loaded. Eventually I discovered this was due to one of the files in the extension installation not being put in the right place. If you get this problem, open up the extension installer file Tvl.VisualStudio.Language.Antlr3.vsix (it’s in standard zip format so WinZip or WinRar should open it) and copy the file Tvl.VisualStudio.Shell.OutputWindow.Interfaces.dll to C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\CommonExtensions\Microsoft\Editor. (The (x86) in the Program Files folder will be there if you’re running a 32-bit version of Visual Studio under 64-bit Windows 7. If you’re using 32-bit Windows 7, it’s just the Program Files folder.)</p>
+
+                        <p>There are a few steps that need to be performed each time you create an ANTLR project in VS2010. These steps are described in the documentation for a project called CoolTool, but I’ll run through them here for completeness.</p>
+
+                        <p>First, create your new project (we’ll call it AntlrTest01) in VS. Then create a new folder called Reference in the solution’s directory, and unzip the contents of the bootstrap file you downloaded above into this folder. You’ll need to copy this folder to each new project unless you want to store it in a central location and refer to it in the next step, but be aware that if you want to distribute your program, these files will need to go along with it, so it’s often handier to just have a copy of them with your project.</p>
+
+                    </div>
+                </div>
+                <div class="pure-u-1-3 ">
+                    <button class="pure-button button-success">
+                        <i class="fa fa-plus"></i>
+                        Añadir Recurso
+                    </button>
+
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+</html>

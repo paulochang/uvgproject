@@ -1,0 +1,310 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Portal Académico - Calendario</title>
+    <meta name="description" content="Portal académico de UVG">
+    <meta name="author" content="UVG">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="static/scripts/jquery-1.11.1.js"></script>
+	<script src="static/scripts/functions.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body class="l-box">
+    <script src="static/scripts/main.js"></script>
+    <div class="login pure-g align-right">
+        <div class="pure-u-3-4">
+            <form class="pure-form">
+                    <input type="email" placeholder="Usuario">
+                    <input type="password" placeholder="Contraseña">
+
+                    <label for="remember">
+                        <input id="remember" type="checkbox"> Recordar
+                    </label>
+
+                    <button type="submit" class="pure-button pure-button-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+    <div class="pure-menu pure-menu-open pure-menu-horizontal">
+        <ul>
+            <li><a href="perfil.html">Perfil</a></li>
+            <li><a href="cursos.html">Cursos</a></li>
+            <li><a href="archivos.html">Archivos</a></li>
+            <li class="pure-menu-selected"><a href="#">Calendario</a></li>
+        </ul>
+    </div>
+
+	    <div class="pure-g">
+        <div class="pure-u-1-4">
+			<input type="date" ID = "Calendar"/>
+			<a href="nuevaTarea.html"><button type="submit" class="pure-button"  onclick="onClickB" ID = "CreateN"> Crear nueva tarea</button></a>
+        </div>
+		</div>
+
+		<div class="pure-u-3-4">
+            <form class="pure-form pure-form-aligned l-box">
+				<TABLE Border = "1">
+					<TR>
+					<TD ALIGN = "center" ID = "Mon"> Hora <span class = "DateContainer"></span></TD>
+					<TD ALIGN = "center" ID = "Mon"> Mon <span class = "DateContainer"><input type="date" ID = "MonDate" readonly = "readonly"/></span></TD>
+					<TD ALIGN = "center" ID = "Tue"> Tue <span class = "DateContainer"><input type="date" ID = "TueDate" readonly = "readonly"/></span></TD>
+					<TD ALIGN = "center" ID = "Wen"> Wen <span class = "DateContainer"><input type="date" ID = "WedDate" readonly = "readonly"/></span></TD>
+					<TD ALIGN = "center" ID = "Thu"> Thu <span class = "DateContainer"><input type="date" ID = "ThuDate" readonly = "readonly"/></span></TD>
+					<TD ALIGN = "center" ID = "Fri"> Fri <span class = "DateContainer"><input type="date" ID = "FriDate" readonly = "readonly"/></span></TD>
+					<TD ALIGN = "center" ID = "Sat"> Sat <span class = "DateContainer"><input type="date" ID = "SatDate" readonly = "readonly"/></span></TD>
+					<TD ALIGN = "center" ID = "Sun"> Sun <span class = "DateContainer"><input type="date" ID = "SunDate" readonly = "readonly"/></span></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>12 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>1 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>2 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>3 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>4 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>5 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>6 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>7 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>8 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>9 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>10 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>11 am</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>12 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>1 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>2 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>3 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>4 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>5 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>6 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>7 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>8 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TR>
+					<TD ALIGN = "center" width='186' height = '100 '>9 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TD ALIGN = "center" width='186' height = '100 '>10 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					<TD ALIGN = "center" width='186' height = '100 '>11 pm</TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					<TD ALIGN = "center" width='186' height = '100 '></TD>
+					</TR>
+					</TABLE>
+            </form>
+        </div>
+
+
+</body>
+</html>
