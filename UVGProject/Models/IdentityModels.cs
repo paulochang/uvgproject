@@ -29,5 +29,7 @@ namespace UVGProject.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<UVGProject.Models.Archivo> Archivoes { get; set; }
     }
 }
