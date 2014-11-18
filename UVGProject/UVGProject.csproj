@@ -230,7 +230,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Curso\index.cshtml" />
-    <Content Include="Views\CursosArchivo\index.cshtml" />
+    <Content Include="Views\Curso\archivos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

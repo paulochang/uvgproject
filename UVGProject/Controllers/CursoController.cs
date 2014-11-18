@@ -13,5 +13,10 @@ namespace UVGProject.Controllers
         {
             return View();
         }
+        // GET: Crusos
+        public ActionResult Archivos()
+        {
+            return View();
+        }
     }
 }
