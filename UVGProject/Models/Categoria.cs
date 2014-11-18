@@ -9,6 +9,6 @@ namespace UVGProject.Models
     {
         public int ID { get; set; }
         public string Nombre { get; set; }
-        public ICollection<Recurso> Recursos { get; set; }
+        public virtual ICollection<Recurso> Recursos { get; set; }
     }
 }

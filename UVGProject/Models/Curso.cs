@@ -12,9 +12,9 @@ namespace UVGProject.Models
         public string Descripcion { get; set; }
         public int Semestre { get; set; }
 
-        public ICollection<Curso_Usuario> Curso_Usuarios { get; set; }
-        public ICollection<Entrada> Entradas { get; set; }
-        public ICollection<Recurso> Recursos { get; set; }
+        public virtual ICollection<Curso_Usuario> Curso_Usuarios { get; set; }
+        public virtual ICollection<Entrada> Entradas { get; set; }
+        public virtual ICollection<Recurso> Recursos { get; set; }
 
     }
 }

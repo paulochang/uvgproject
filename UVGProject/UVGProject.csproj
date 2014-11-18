@@ -159,9 +159,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ArchivoesController.cs" />
-    <Compile Include="Controllers\CursosArchivoController.cs" />
-    <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -172,7 +169,7 @@
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\Curso_Usuario.cs" />
     <Compile Include="Models\Entrada.cs" />
-    <Compile Include="Models\Archivo.cs" />
+    <Compile Include="Models\Entrada_Respuesta.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Recurso.cs" />
@@ -237,13 +234,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Curso\index.cshtml" />
-    <Content Include="Views\Curso\archivos.cshtml" />
-    <Content Include="Views\Archivoes\Create.cshtml" />
-    <Content Include="Views\Archivoes\Delete.cshtml" />
-    <Content Include="Views\Archivoes\Details.cshtml" />
-    <Content Include="Views\Archivoes\Edit.cshtml" />
-    <Content Include="Views\Archivoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
