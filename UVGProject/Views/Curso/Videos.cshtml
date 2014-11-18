@@ -183,17 +183,13 @@
 
             </div>
             <ul class="">
-                <form action="<%: Url.Action(" upload") %>
-                    <label for="descripcion">Descripción del fichero:</label>
-                    <br />
-                    <input type="text" id="descripcion" name="descripcion" />
-                    <br />
-                    <input type="file" name="fichero" size="40">
-                    <br />
-                    <input type="submit" value="Enviar" />
-                </form>   
+                @using (Html.BeginForm("Upload", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <input type="file" name="FileUpload" />
+                    <input type="submit" name="Submit" id="Submit" value="Upload" />
+                }
             </ul>
-            
+
             <br />
             <ul class="pure-menu no-style">
                 <li><a href="#">link1</a></li>

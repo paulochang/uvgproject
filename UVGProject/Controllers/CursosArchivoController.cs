@@ -14,4 +14,10 @@ namespace UVGProject.Controllers
             return View();
         }
     }
+    [HttpPost]
+    public ActionResult Upload(string descripcion, HttpPostedFileBase fichero)
+    {
+    fichero.SaveAs(Path.Combine(@"d:\temp", Path.GetFileName(fichero.FileName)));
+    return View();
+    }
 }
