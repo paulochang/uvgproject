@@ -25,6 +25,12 @@ namespace UVGProject.Models
         {
         }
 
+        public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Curso_Usuario> Curso_Usuarios { get; set; }
+        public DbSet<Entrada> Entradas { get; set; }
+        public DbSet<Recurso> Recursos { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
