@@ -46,13 +46,13 @@
         <div class="pure-u-3-4">
             <form class="pure-form pure-form-aligned l-box">
 			<div class = "login">
-			<button type="submit" class="pure-button button-error">Guardar</button>
+			<button type="submit" class="pure-button button-error" onclick ="clickSave">Guardar</button>
 			<a href="calendar.html" class="pure-button">Cancelar</a>
 			</div>
                 <div class="l-box">
 					<div class="pure-control-group">
 						<label for="Name">Nombre de la tarea: </label>
-						<input id="Name" required type="text">
+						<input id="Name_" required type="text">
 					</div>
 					<div class="pure-control-group">
 						<label for="Name">Curso: </label>
