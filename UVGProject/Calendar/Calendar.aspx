@@ -40,7 +40,7 @@
     <div class="pure-g">
         <div class="pure-u-1-4">
             <input type="date" id="Calendar" />
-            <a href="nuevaTarea.aspx"><button type="submit" class="pure-button" onclick="onClickB" id="CreateN"> Crear nueva tarea</button></a>
+            <a href="nuevaTarea.aspx"><asp:button runat="server" type="submit" class="pure-button" onclick="onClickB" id="CreateN" Text ="Crear Nueva Tarea"></asp:button></a>
         </div>
     </div>
     <div class="pure-u-3-4">

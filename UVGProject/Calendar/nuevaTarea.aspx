@@ -52,7 +52,7 @@
                 <div class="l-box">
 					<div class="pure-control-group">
 						<label for="Name">Nombre de la tarea: </label>
-						<input id="Name_" required type="text">
+						<asp:textbox runat ="server" id="Name_" ></asp:textbox>
 					</div>
 					<div class="pure-control-group">
 						<label for="Name">Curso: </label>
