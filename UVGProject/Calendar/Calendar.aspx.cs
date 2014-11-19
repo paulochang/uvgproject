@@ -20,15 +20,15 @@ namespace UVGProject.Calendar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-             UserCredential credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
-                new ClientSecrets
-                {
-                    ClientId = "836857798906-v62gcavjo521p4jjulhtnal4q9iqop0g.apps.googleusercontent.com",
-                    ClientSecret = "x47KLrfujdF7KQymyFfcNLg8",
-                },
-                new[] { CalendarService.Scope.Calendar },
-                "user",
-                CancellationToken.None).Result;
+            UserCredential credential = GoogleWebAuthorizationBroker.AuthorizeAsync(
+               new ClientSecrets
+               {
+                   ClientId = "836857798906-v62gcavjo521p4jjulhtnal4q9iqop0g.apps.googleusercontent.com",
+                   ClientSecret = "x47KLrfujdF7KQymyFfcNLg8",
+               },
+               new[] { CalendarService.Scope.Calendar },
+               "user",
+               CancellationToken.None).Result;
 
             // Create the service.
             var service = new CalendarService(new BaseClientService.Initializer()
@@ -39,6 +39,12 @@ namespace UVGProject.Calendar
 
 
         }
+
+
+        protected void onClickB(object sender, EventArgs e)
+        {
+            Response.Redirect("nuevaTarea.aspx", false);
         }
-    
+
+    }
 }
