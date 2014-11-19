@@ -1,0 +1,54 @@
+﻿@model UVGProject.Models.Entrada
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Entrada</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Contenido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Contenido)
+        </dd>
+        <dd>
+            <dl class="dl-horizontal">
+                @foreach (var item in Model.Entrada_Respuestas)
+                {
+                    <dt>
+                        @Html.DisplayNameFor(modelItem => item.Respuesta.Titulo)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(modelItem => item.Respuesta.Titulo)
+                    </dd>
+                    <dt>
+                        @Html.DisplayNameFor(modelItem => item.Respuesta.Texto)
+                    </dt>
+                    <dd>
+                        @Html.DisplayFor(modelItem => item.Respuesta.Texto)
+                    </dd>
+                }
+            </dl>
+        </dd>
+    </dl>
+    @{Html.RenderAction("Create", "Respuestas", new { EntradaID = Model.ID});}
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit") |
+    @Html.ActionLink("Back to List", "Index")
+</p>
