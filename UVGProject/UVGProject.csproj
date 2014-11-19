@@ -39,6 +39,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Google.Apis">
+      <HintPath>..\..\..\Documents\Visual Studio 2013\Projects\WebApplication2\packages\Google.Apis.1.9.0\lib\net40\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth">
+      <HintPath>..\..\..\Documents\Visual Studio 2013\Projects\WebApplication2\packages\Google.Apis.Auth.1.9.0\lib\net40\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices">
+      <HintPath>..\..\..\Documents\Visual Studio 2013\Projects\WebApplication2\packages\Google.Apis.Auth.1.9.0\lib\net40\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3">
+      <HintPath>..\..\..\Documents\Visual Studio 2013\Projects\WebApplication2\packages\Google.Apis.Calendar.v3.1.9.0.1050\lib\portable-net40+sl50+win+wpa81+wp80\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core">
+      <HintPath>..\..\..\Documents\Visual Studio 2013\Projects\WebApplication2\packages\Google.Apis.Core.1.9.0\lib\portable-net40+sl50+win+wpa81+wp80\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices">
+      <HintPath>..\..\..\Documents\Visual Studio 2013\Projects\WebApplication2\packages\Google.Apis.1.9.0\lib\net40\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -158,6 +176,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Calendar\Calendar.aspx.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calendar\Calendar.aspx.designer.cs">
+      <DependentUpon>Calendar.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CursoController.cs" />
     <Compile Include="Controllers\EntradasController.cs" />
@@ -183,6 +208,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Calendar\Calendar.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
