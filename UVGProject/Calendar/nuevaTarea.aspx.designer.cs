@@ -10,6 +10,6 @@
 namespace UVGProject.Calendar {
     
     
-    public partial class Calendar {
+    public partial class nuevaTarea {
     }
 }
