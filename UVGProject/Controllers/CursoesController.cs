@@ -74,6 +74,36 @@ namespace UVGProject.Controllers
             return View(model);
         }
 
+        public ActionResult Videos(int? id)
+        {
+            CoursesSingleViewModel model;
+            if (id != null)
+            {
+                Curso curso = db.Cursos.Find(id);
+                if (curso == null)
+                {
+                    return HttpNotFound();
+                }
+
+                model = new CoursesSingleViewModel()
+                {
+                    CursoActual = curso,
+                    Cursos = db.Cursos.ToList(),
+                    SelectedID = id
+                };
+            }
+            else
+            {
+                model = new CoursesSingleViewModel()
+                {
+                    CursoActual = null,
+                    Cursos = db.Cursos.ToList(),
+                    SelectedID = null
+                };
+            }
+            return View(model);
+        }
+
         // GET: Cursoes/Create
         public ActionResult Create()
         {
