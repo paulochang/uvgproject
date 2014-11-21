@@ -220,15 +220,18 @@
       <DependentUpon>nuevaTarea.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CursoController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ArticuloesController.cs" />
+    <Compile Include="Controllers\CursoesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\VideosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Articulo.cs" />
+    <Compile Include="Models\ArticleSingleViewModel.cs" />
+    <Compile Include="Models\CoursesSingleViewModel.cs" />
     <Compile Include="Models\Curso.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -271,9 +274,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -295,6 +295,23 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Articuloes\Create.cshtml" />
+    <Content Include="Views\Articuloes\Delete.cshtml" />
+    <Content Include="Views\Articuloes\Details.cshtml" />
+    <Content Include="Views\Articuloes\Edit.cshtml" />
+    <Content Include="Views\Articuloes\Index.cshtml" />
+    <Content Include="Views\Cursoes\Admin.cshtml" />
+    <Content Include="Views\Videos\Create.cshtml" />
+    <Content Include="Views\Videos\Delete.cshtml" />
+    <Content Include="Views\Videos\Details.cshtml" />
+    <Content Include="Views\Videos\Edit.cshtml" />
+    <Content Include="Views\Videos\Index.cshtml" />
+    <Content Include="Views\Cursoes\Index.cshtml" />
+    <Content Include="Views\Cursoes\Create.cshtml" />
+    <Content Include="Views\Cursoes\Delete.cshtml" />
+    <Content Include="Views\Cursoes\Details.cshtml" />
+    <Content Include="Views\Cursoes\Edit.cshtml" />
+    <Content Include="Views\Cursoes\Articulos.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -10,15 +10,17 @@ namespace UVGProject.Models
     {
         public int ID { get; set; }
         [Required]
-        [MinLength(6)]
+        [MinLength(5)]
         [MaxLength(10)]
-        public string Código { get; set; }
+        public string Codigo { get; set; }
         [Required]
         [MinLength(5)]
         [MaxLength(100)]
         public string Descripcion { get; set; }
 
         public virtual ICollection<ApplicationUser> Usuarios { get; set; }
+        public virtual ICollection<Articulo> Articulos { get; set; }
+        public virtual ICollection<Video> Videos { get; set; }
 
     }
 }

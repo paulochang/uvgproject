@@ -1,0 +1,20 @@
+﻿@model IEnumerable<UVGProject.Models.Curso>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<ul class="list-group">
+    <li class="list-group-item disabled">
+        Cursos
+    </li>
+    @foreach (UVGProject.Models.Curso item in Model)
+    {
+        <li class="list-group-item">
+            @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", new { id = item.ID })
+        </li>
+    }
+</ul>

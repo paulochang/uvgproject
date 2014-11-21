@@ -10,107 +10,108 @@ using UVGProject.Models;
 
 namespace UVGProject.Controllers
 {
-    public class CursoController : Controller
+    [Authorize]
+    public class VideosController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
-        // GET: Curso
+        // GET: Videos
         public ActionResult Index()
         {
-            return View(db.Cursos.ToList());
+            return View(db.Videos.ToList());
         }
 
-        // GET: Curso/Details/5
+        // GET: Videos/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Curso curso = db.Cursos.Find(id);
-            if (curso == null)
+            Video video = db.Videos.Find(id);
+            if (video == null)
             {
                 return HttpNotFound();
             }
-            return View(curso);
+            return View(video);
         }
 
-        // GET: Curso/Create
+        // GET: Videos/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Curso/Create
+        // POST: Videos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Nombre,Descripcion,Semestre")] Curso curso)
+        public ActionResult Create([Bind(Include = "ID,Titulo,Link")] Video video)
         {
             if (ModelState.IsValid)
             {
-                db.Cursos.Add(curso);
+                db.Videos.Add(video);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(curso);
+            return View(video);
         }
 
-        // GET: Curso/Edit/5
+        // GET: Videos/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Curso curso = db.Cursos.Find(id);
-            if (curso == null)
+            Video video = db.Videos.Find(id);
+            if (video == null)
             {
                 return HttpNotFound();
             }
-            return View(curso);
+            return View(video);
         }
 
-        // POST: Curso/Edit/5
+        // POST: Videos/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Nombre,Descripcion,Semestre")] Curso curso)
+        public ActionResult Edit([Bind(Include = "ID,Titulo,Link")] Video video)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(curso).State = EntityState.Modified;
+                db.Entry(video).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(curso);
+            return View(video);
         }
 
-        // GET: Curso/Delete/5
+        // GET: Videos/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Curso curso = db.Cursos.Find(id);
-            if (curso == null)
+            Video video = db.Videos.Find(id);
+            if (video == null)
             {
                 return HttpNotFound();
             }
-            return View(curso);
+            return View(video);
         }
 
-        // POST: Curso/Delete/5
+        // POST: Videos/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Curso curso = db.Cursos.Find(id);
-            db.Cursos.Remove(curso);
+            Video video = db.Videos.Find(id);
+            db.Videos.Remove(video);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

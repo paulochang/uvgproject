@@ -1,0 +1,41 @@
+﻿@model UVGProject.Models.ArticleSingleViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="col-md-4">
+    <ul class="list-group">
+        <li class="list-group-item disabled">
+            Cursos
+        </li>
+        @foreach (UVGProject.Models.Curso item in Model.Cursos)
+        {
+            if (Model.SelectedID.HasValue && (item.ID == Model.SelectedID.Value))
+            {
+                <li class="list-group-item list-group-item-info">
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", new { id = item.ID })
+                </li>
+            }
+            else
+            {
+                <li class="list-group-item">
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", new { id = item.ID })
+                </li>
+            }
+        }
+    </ul>
+</div>
+<div class="col-md-8">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @Html.ActionLink(Model.ArticuloActual.Titulo, "Details", new { id = Model.SelectedID })
+        </div>
+        <div class="panel-body">
+            @Html.DisplayFor(model => model.ArticuloActual.Contenido)
+        </div>
+    </div>
+</div>

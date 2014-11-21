@@ -6,15 +6,17 @@ using System.Web;
 
 namespace UVGProject.Models
 {
-    public class Articulo
+    public class Video
     {
         public int ID { get; set; }
         [Required]
-        [MinLength(2)]
+        [MinLength(5)]
         [MaxLength(100)]
         public string Titulo { get; set; }
         [Required]
-        public string Contenido { get; set; }
+        [MinLength(5)]
+        [MaxLength(15)]
+        public string Link { get; set; }
         public virtual Curso Curso { get; set; }
         public virtual ApplicationUser Autor { get; set; }
     }

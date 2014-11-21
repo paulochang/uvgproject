@@ -1,0 +1,66 @@
+﻿@model UVGProject.Models.CoursesSingleViewModel
+
+@{
+    ViewBag.Title = "Artículos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Artículos</h2>
+
+<div class="col-md-4">
+    <ul class="list-group">
+        <li class="list-group-item disabled">
+            Cursos
+        </li>
+        @foreach (UVGProject.Models.Curso item in Model.Cursos)
+        {
+            if (Model.SelectedID.HasValue && (item.ID == Model.SelectedID.Value))
+            {
+                <li class="list-group-item list-group-item-info">
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", new { id = item.ID })
+                </li>
+            }
+            else
+            {
+                <li class="list-group-item">
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", new { id = item.ID })
+                </li>
+            }
+        }
+    </ul>
+</div>
+
+<div class="col-md-8">
+    @if (Model.SelectedID.HasValue)
+    {
+        <ul class="list-group">
+            <li class="list-group-item disabled">
+                @Html.ActionLink(Model.CursoActual.Descripcion, "Details", new { id = Model.SelectedID })
+            </li>
+            @foreach (UVGProject.Models.Articulo item in Model.CursoActual.Articulos)
+            {
+                <li class="list-group-item">
+                    @Html.ActionLink(item.Titulo, "Details", "Articuloes", new { id = item.ID }, null)
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        foreach (UVGProject.Models.Curso item in Model.Cursos)
+        {
+            <ul class="list-group">
+                <li class="list-group-item disabled">
+                    @Html.ActionLink(item.Descripcion, "Details", new { id = item.ID })
+                </li>
+                @foreach (UVGProject.Models.Articulo article in item.Articulos)
+                {
+                    <li class="list-group-item">
+                        @Html.ActionLink(article.Titulo, "Details", "Articuloes", new { id = article.ID }, null)
+                    </li>
+                }
+            </ul>
+
+        }
+    }
+</div>
