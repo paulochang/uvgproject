@@ -33,6 +33,7 @@
 <div class="col-md-8">
     @if (Model.SelectedID.HasValue)
     {
+        @Html.ActionLink("Crear Nuevo", "Create", "Videos", new { id = Model.SelectedID.Value }, null)
         <ul class="list-group">
             <li class="list-group-item disabled">
                 @Html.ActionLink(Model.CursoActual.Descripcion, "Details", new { id = Model.SelectedID })
@@ -53,10 +54,10 @@
                 <li class="list-group-item disabled">
                     @Html.ActionLink(item.Descripcion, "Details", new { id = item.ID })
                 </li>
-                @foreach (UVGProject.Models.Articulo article in item.Articulos)
+                @foreach (UVGProject.Models.Video article in item.Videos)
                 {
                     <li class="list-group-item">
-                        @Html.ActionLink(article.Titulo, "Details", "Video", new { id = article.ID }, null)
+                        @Html.ActionLink(article.Titulo, "Details", "Videos", new { id = article.ID }, null)
                     </li>
                 }
             </ul>

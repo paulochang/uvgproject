@@ -1,4 +1,4 @@
-﻿@model UVGProject.Models.Video
+﻿@model UVGProject.Models.VideoSingleViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -7,29 +7,36 @@
 
 <h2>Details</h2>
 
-<div>
-    <h4>Video</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Titulo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Titulo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Link)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Link)
-        </dd>
-
-    </dl>
+<div class="col-md-4">
+    <ul class="list-group">
+        <li class="list-group-item disabled">
+            Cursos
+        </li>
+        @foreach (UVGProject.Models.Curso item in Model.Cursos)
+        {
+            if (Model.SelectedID.HasValue && (item.ID == Model.SelectedID.Value))
+            {
+                <li class="list-group-item list-group-item-info">
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", "Cursoes", new { id = item.ID }, null)
+                </li>
+            }
+            else
+            {
+                <li class="list-group-item">
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", "Cursoes", new { id = item.ID }, null)
+                </li>
+            }
+        }
+    </ul>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="col-md-8">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            @Html.ActionLink(Model.VideoActual.Titulo, "Details", new { id = Model.SelectedID })
+        </div>
+        <div class="panel-body">
+            <iframe width="640" height="360" src="//www.youtube.com/embed/@Model.VideoActual.Link?rel=0&amp;showinfo =0"
+                    frameborder="0" allowfullscreen=""></iframe>            
+        </div>
+    </div>
+</div>

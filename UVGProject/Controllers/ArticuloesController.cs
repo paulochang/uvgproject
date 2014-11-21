@@ -27,7 +27,7 @@ namespace UVGProject.Controllers
         // GET: Articuloes
         public ActionResult Index()
         {
-            return View(db.Articulos.ToList());
+            return RedirectToAction("Articulos", "Cursoes");
         }
 
         // GET: Articuloes/Details/5

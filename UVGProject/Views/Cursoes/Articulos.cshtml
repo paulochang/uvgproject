@@ -33,6 +33,7 @@
 <div class="col-md-8">
     @if (Model.SelectedID.HasValue)
     {
+        @Html.ActionLink("Crear Nuevo", "Create", "Articuloes", new { id = Model.SelectedID.Value},null)
         <ul class="list-group">
             <li class="list-group-item disabled">
                 @Html.ActionLink(Model.CursoActual.Descripcion, "Details", new { id = Model.SelectedID })

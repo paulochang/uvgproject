@@ -17,13 +17,13 @@
             if (Model.SelectedID.HasValue && (item.ID == Model.SelectedID.Value))
             {
                 <li class="list-group-item list-group-item-info">
-                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", new { id = item.ID })
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details","Cursoes", new { id = item.ID }, null)
                 </li>
             }
             else
             {
                 <li class="list-group-item">
-                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", new { id = item.ID })
+                    @Html.ActionLink(item.Codigo + " - " + item.Descripcion, "Details", "Cursoes", new { id = item.ID }, null)
                 </li>
             }
         }
