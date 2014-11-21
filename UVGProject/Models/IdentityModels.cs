@@ -10,10 +10,9 @@ namespace UVGProject.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-        public virtual ICollection<Curso_Usuario> Curso_Usuarios { get; set; }
-        public virtual ICollection<Entrada> Entradas { get; set; }
-        public virtual ICollection<Recurso> Recursos { get; set; }
-        public virtual ICollection<Respuesta> Respuestas { get; set; }
+        public virtual ICollection<Curso> Cursos { get; set; }
+        public virtual ICollection<Articulo> Articulos { get; set; }
+        public virtual ICollection<Video> Videos { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -29,14 +28,9 @@ namespace UVGProject.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-
-        public DbSet<Categoria> Categorias { get; set; }
         public DbSet<Curso> Cursos { get; set; }
-        public DbSet<Curso_Usuario> Curso_Usuarios { get; set; }
-        public DbSet<Entrada> Entradas { get; set; }
-        public DbSet<Entrada_Respuesta> Entrada_Respuestas { get; set; }
-        public DbSet<Recurso> Recursos { get; set; }
-        public DbSet<Respuesta> Respuestas { get; set; }
+        public DbSet<Articulo> Articulos { get; set; }
+        public DbSet<Video> Videos { get; set; }
 
         public static ApplicationDbContext Create()
         {
